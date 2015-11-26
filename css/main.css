@@ -33,6 +33,7 @@ nav {
 	background-color: rgba(168, 158, 110, 0.8);
 	display: inline-block;
 	width: 100%;
+	border-bottom: 3px solid white;
 	
 }
 li {
