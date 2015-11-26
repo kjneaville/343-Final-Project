@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PikeApp">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pi Kappa Alpha Beta Beta Chapter</title>
+	<link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/645667776439418880/EZOpIPEN.jpg">
+	<link rel="stylesheet" href="css/main.css"/>
+	<!-- load angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+</head>
+<body>
+	<main ng-app="PikeApp" >
+		<a name="Top"></a>
+		<nav>
+			<ul>
+				<li><a href="#/#Home">Home</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
+         			 <ul class="dropdown-menu">
+            			<li><a href="#">House Information</a></li>
+            			<li><a href="#">SLAG</a></li>
+           			    <li><a href="#">Beta Beta</a></li> 
+          			</ul>
+          		</li>
+				<li><a href="#/Events">Events</a></li>
+				<li><a href="#/History">History</a></li>
+				<li><a href="#/Members">Members</a></li>
+				<li><a href="#/Recruitment">Recruitment</a></li>
+				<li class="shop"><a href="#/Contact_Us">Contact</a></li>
+
+			</ul>		
+		</nav>
+		<header class="frontPage">
+		<div class="container">
+			<h1 class="frontHead">Pi Kappa Alpha</h1>
+			<p id="motto">Beta Beta Chapter, established 1914</p>
+		</div>
+</header>
+<div ui-view></div>
+	</main>
+<footer>
+	<div class="container">
+	<div class="row">
+    	<div class="col-sm-6">
+    		<p>Updated Dec. 10, 2015</p>
+    	</div>
+    	<div class="col-sm-6">
+    		<p>Information about the national fraternity can be found <a href="https://www.pikes.org/">here</a>.</p>
+    	</div>
+  	</div>
+  </div>
+</footer>
+<!-- load external libraries -->
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+<script src="lib/ui-bootstrap-tpls-0.14.3.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.js"></script>
+
+<!-- load our script -->
+<script src="js/pikes.js"></script>
+</body>
+</html>
