@@ -66,11 +66,12 @@ nav ul li svg:active {
 	fill: rgb(152, 0, 48);
 }
 nav ul li ul.dropdown{
+	padding-left: 0;
+	margin-left: 0;
 	position: absolute;
-	z-index = 5;
-	left: 0;
+	z-index = 999;
 	display:none;
-	background-color: rgba(168, 158, 110, 0.8);
+	background-color: rgba(168, 158, 110, 0.9);
 }
 nav ul li:hover ul.dropdown {
 	display: block;
@@ -85,10 +86,6 @@ header {
 	background-size: cover;
 	background-position: center center;
 	width: 100%;
-}
-.dropdown-menu {
-	position: relative;
-	padding: 20px;
 }
 
 .col-md-6 {
