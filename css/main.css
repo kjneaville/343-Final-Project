@@ -65,6 +65,19 @@ nav ul li svg:hover {
 nav ul li svg:active {
 	fill: rgb(152, 0, 48);
 }
+nav ul li ul.dropdown{
+	position: absolute;
+	z-index = 5;
+	left: 0;
+	display:none;
+	background-color: rgba(168, 158, 110, 0.8);
+}
+nav ul li:hover ul.dropdown {
+	display: block;
+}
+nav ul li:hover li.dropdown{
+	display:block;
+}
 header {
 	background-image: url(../img/PikeFrontIFC.jpg);
 	padding-top: 3em;
