@@ -82,6 +82,9 @@ header {
 	padding: 1em;
 }
 
+#rushPikejpg {
+	width: 100%;
+}
 footer {
 	border-top: 3px solid rgb(255, 196, 37);
 	background-color: rgb(167, 158, 112);
