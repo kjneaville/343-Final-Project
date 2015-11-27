@@ -125,6 +125,11 @@ footer {
 			h2 {
 				text-align: center;
 			}
+			nav ul li ul li a {
+				padding-left: 0;
+				padding-right: 0;
+				padding-bottom: 0;
+			}
 			li a {
 				padding-left: 1em;
 				padding-right: 1em;
