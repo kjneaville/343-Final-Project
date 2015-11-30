@@ -33,6 +33,7 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 	.state('recruit', {			   //For details of each bean
 			url: '/Recruitment',
 			templateUrl: 'partials/recruit.html',
+			controller: 'RecruitCtrl'
 	})
 	.state('contact', {			   //For details of each bean
 			url: '/Contact_Us',
@@ -40,6 +41,17 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 	})
 	$urlRouterProvider.otherwise('/'); //All invalid addresses route to homepage
 })
+
+.controller('RecruitCtrl', ['$scope', '$http', function($scope, $http){
+	$scope.checkEmail = function() {
+    	if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($scope.Email)) {
+    		$scope.newForm.Email.$setValidity('Email', true);
+        } else {
+            $scope.newForm.Email.$setValidity('Email', false);
+        }
+    }
+
+}])
 
 
 
