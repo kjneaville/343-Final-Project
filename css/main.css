@@ -80,7 +80,7 @@ nav ul li:hover li.dropdown{
 	display:block;
 }
 header {
-	background-image: url(../img/PikeFrontIFC.jpg);
+	background-image: url(../img/PikeFrontOmegaFi2.png);
 	padding-top: 3em;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -161,7 +161,6 @@ footer {
 				padding-right: 1em;
 			}
 			.frontPage {
-				background-image: url(../img/PikeFrontIFC.jpg);
 				min-height: 450px;
 			}
 			h1, #motto {
