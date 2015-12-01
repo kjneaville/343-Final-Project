@@ -29,6 +29,7 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 	.state('members', {			   //For details of each bean
 			url: '/Members',
 			templateUrl: 'partials/members.html',
+			controller: 'MembersCtrl'
 	})
 	.state('recruit', {			   //For details of each bean
 			url: '/Recruitment',
@@ -41,6 +42,11 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 	})
 	$urlRouterProvider.otherwise('/'); //All invalid addresses route to homepage
 })
+.controller('MembersCtrl', ['$scope', '$http', function($scope, $http) {
+	$http.get('data/members.json').then(function(response) {
+ 		$scope.members = response.data;
+ 	});
+}])
 
 .controller('RecruitCtrl', ['$scope', '$http', function($scope, $http){
 	$scope.checkEmail = function() {
