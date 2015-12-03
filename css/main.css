@@ -25,6 +25,12 @@ h2 {
 	font-size: 20px;
 	color: #d87e28;
 }
+p {
+	text-align: center;
+	color: white;
+	padding-left: 1em;
+	padding-right: 1em;
+}
 nav {
 	position: fixed;
 	top: 0;
