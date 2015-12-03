@@ -91,7 +91,13 @@ header {
 .col-md-6 {
 	padding: 1em;
 }
-
+.contactDiv {
+	background: gray;
+	border-radius: 5px;
+}
+a{
+	color:black;
+}
 #rushPikejpg {
 	width: 100%;
 }
