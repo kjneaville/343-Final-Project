@@ -21,6 +21,7 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 	.state('events', {			   //For details of each bean
 			url: '/Events',
 			templateUrl: 'partials/events.html',
+			controller: 'EventsCtrl'
 	})
 	.state('history', {			   //For details of each bean
 			url: '/History',
@@ -58,10 +59,18 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
     }
 
     $scope.reset = function() {
+    	document.getElementById("rushForm").reset();
         $scope.rushForm.$setPristine();
     }
 
 }])
+
+.controller('EventsCtrl', ['$scope', '$http', function($scope, $http){
+	Calendar.setup({
+	  dateField     : 'date',
+	  parentElement : 'calendar'
+	});
+}]) 
 
 
 
