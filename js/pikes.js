@@ -66,10 +66,7 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 }])
 
 .controller('EventsCtrl', ['$scope', '$http', function($scope, $http){
-	Calendar.setup({
-	  dateField     : 'date',
-	  parentElement : 'calendar'
-	});
+	
 }]) 
 
 
