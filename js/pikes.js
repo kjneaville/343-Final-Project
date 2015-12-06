@@ -58,9 +58,18 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
         }
     }
 
+    $scope.checkName = function() {
+    	if($scope.lastName.length >= 1) {
+    		$scope.rushForm.lastName.$setValidity('lastName', true);
+        } else {
+            $scope.rushForm.lastName.$setValidity('lastName', false);
+        }
+    }
+
     $scope.reset = function() {
     	document.getElementById("rushForm").reset();
         $scope.rushForm.$setPristine();
+        $scope.rushForm.$setUntouched();
     }
 
 }])
