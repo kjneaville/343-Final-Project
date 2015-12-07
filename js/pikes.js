@@ -47,6 +47,11 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 			templateUrl: 'partials/contact.html',
 			controller: 'ContactCtrl'
 	})
+    .state('login', {              //For details of each bean
+            url: '/Login',
+            templateUrl: 'partials/memberlogin.html',
+            controller: 'LoginCtrl'
+    })
 	$urlRouterProvider.otherwise('/'); //All invalid addresses route to homepage
 })
 
@@ -128,6 +133,12 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 .controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
 	
 }])
+
+.controller('LoginCtrl', ['$scope', '$http', function($scope, $http) {
+    
+}])
+
+
 
 
 
