@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanitize for HTML displaying
+angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase']) //ngSanitize for HTML displaying
 .config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider.state('home', { //For homepage
 		url: '/',
@@ -53,7 +53,7 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
             controller: 'LoginCtrl'
     })
     .state('login', {   
-            url: '/Login',           
+            url: '/Members-Area',        
             templateUrl: 'partials/memberlogin.html',
             controller: 'LoginCtrl'
     })
@@ -140,7 +140,7 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 	
 }])
 
-.controller('LoginCtrl', ['$scope', '$firebaseArray', '$firebaseObject', '$firebaseAuth', function($scope, $firebaseArray, $firebaseObject, $firebaseAuth) {
+.controller('LoginCtrl', ['$scope', '$firebaseArray', '$firebaseObject', '$firebaseAuth', '$location', function($scope, $firebaseArray, $firebaseObject, $firebaseAuth, $location) {
 
     var ref = new Firebase("https://pikappaalphabetabeta.firebaseio.com");
 
@@ -151,6 +151,10 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
     $scope.users = $firebaseObject(usersRef);
 
     var Auth = $firebaseAuth(ref);
+
+    $scope.go = function (url) {
+        $location.path(url);
+    }
 
     //$scope.newUser = {}; //holds info about the new user we're creating
 
