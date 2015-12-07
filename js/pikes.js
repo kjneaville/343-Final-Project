@@ -152,9 +152,9 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 
     var Auth = $firebaseAuth(ref);
 
-    $scope.newUser = {}; //holds info about the new user we're creating
+    //$scope.newUser = {}; //holds info about the new user we're creating
 
-        $scope.signIn = function() {
+    $scope.signIn = function() {
       var promise = Auth.$authWithPassword({
         'email': $scope.newUser.email,
         'password': $scope.newUser.password
