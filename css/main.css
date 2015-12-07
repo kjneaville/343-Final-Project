@@ -75,7 +75,7 @@ nav ul li ul.dropdown{
 	padding-left: 0;
 	margin-left: 0;
 	position: absolute;
-	z-index = 999;
+	z-index: 999;
 	display:none;
 	background-color: rgba(168, 158, 110, 0.9);
 }
