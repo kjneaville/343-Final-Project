@@ -1,27 +1,25 @@
-<form name="log" novalidate>
+<form name="logForm" id="logForm" novalidate>
     <!-- Bind model "handle" to this input and make the help-block show up if too short -->
     <div class="form-group">
-        <label for="handle">Handle:</label>
-        <input id="handle" name="handle" class="form-control" ng-minlength="3" required ng-model="newUser.handle">
-        <!-- Add an error message if the length is too short -->    
-        <p class="help-block" ng-if="signupForm.handle.$error.minlength">Too short!</p>
+        <label for="handle">Handle:</label><br>
+        <input id="handle" name="handle" ng-model="newUser.handle" required>
     </div>
     <!-- Bind model "email" to this input and make the help-block show up if bad format -->
     <div class="form-group">
-        <label for="email">Email:</label>
-<input type="email" id="email" name="email" class="form-control" ng-model="newUser.email">
+        <label for="email">Email:</label><br>
+<input type="email" id="email" name="email" ng-model="newUser.email" required>
         <!-- Show an error message if the email is not valid -->    
-        <p class="help-block" ng-if="signupForm.email.$error.email">Not an email!</p>
+        <p class="help-block" ng-if="logForm.email.$error.email">Not an email!</p>
     </div>
 
     <!-- Bind model "password" to this input -->
     <div class="form-group">
-        <label for="pw">Password:</label>
-        <input id="pw" name="password" type="password" class="form-control" required ng-model="newUser.password">
+        <label for="pw">Password:</label><br>
+        <input id="pw" name="password" type="password" ng-model="newUser.password" required>
     </div>
 
     <!-- Submit buttons -->
     <div class="form-group">
-        <button type="submit" class="btn btn-primary" ng-click="signIn(); go('/Members-Area')" ng-disabled="signupForm.email.$invalid || signupForm.password.$invalid" >Sign-in</button>
+        <button type="submit" class="btn btn-primary" ng-click="signIn(); go('/Members-Area')" ng-disabled="logForm.email.$invalid || logForm.password.$invalid">Sign-in</button>
     </div>
 </form>
