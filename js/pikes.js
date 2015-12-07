@@ -97,11 +97,19 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
         }
     }
 
-    $scope.checkName = function() {
+    $scope.checkLast = function() {
     	if($scope.lastName.length >= 1) {
     		$scope.rushForm.lastName.$setValidity('lastName', true);
         } else {
             $scope.rushForm.lastName.$setValidity('lastName', false);
+        }
+    }
+
+    $scope.checkFirst = function() {
+        if($scope.lastName.length >= 1) {
+            $scope.rushForm.lastName.$setValidity('fName', true);
+        } else {
+            $scope.rushForm.lastName.$setValidity('fName', false);
         }
     }
 

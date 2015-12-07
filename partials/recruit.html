@@ -8,13 +8,13 @@
 		<!-- First Name -->
 		<div class="form-group" ng-class="{ 'has-error': rushForm.fName.$invalid && !rushForm.fName.$pristine }">
 			<label for="fName">First Name:</label><br>
-			<input type="text" id="fName" name="fName" placeholder="John" ng-model="fName" ng-keyup="checkName()" required><br>
+			<input type="text" id="fName" name="fName" placeholder="John" ng-model="fName" ng-keyup="checkFirst()" required><br>
 			<p ng-show="rushForm.fName.$invalid && (!rushForm.fName.$pristine || rushForm.fName.$touched)" class="help-block">First name required</p>
 		</div>
 		<!-- Last Name -->
 		<div class="form-group" ng-class="{ 'has-error': rushForm.lastName.$invalid && !rushForm.lastName.$pristine }">
 			<label for="lastName">Last Name:</label><br>
-			<input type="text" id="lastName" name="lastName" placeholder="Smith" ng-model="lastName" ng-keyup="checkName()" required><br>
+			<input type="text" id="lastName" name="lastName" placeholder="Smith" ng-model="lastName" ng-keyup="checkLast()" required><br>
 			<p ng-show="rushForm.lastName.$invalid && (!rushForm.lastName.$pristine || rushForm.lastName.$touched)" class="help-block">Last name required</p>
 		</div>
 		<!-- Year -->
