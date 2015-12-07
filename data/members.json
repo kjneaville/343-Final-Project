@@ -22,5 +22,17 @@
     "majorIOA":"Accepted",
     "highSchool":"Jackson High School",
     "linkedIn":"N/A"
+    },
+    {"name":"Test person",
+    "position":"Member",
+    "hometown":"Mill Creek, WA",
+    "grade":"Junior",
+    "major":"Informatics and Economics",
+    "pc":"PC 14",
+    "career":"Software Developer",
+    "pikeHelp":"Pike has made me a better person. I enjoy being a Pike. Pike PIke PIke.",
+    "majorIOA":"Accepted",
+    "highSchool":"Jackson High School",
+    "linkedIn":"N/A"
     }
 ]
