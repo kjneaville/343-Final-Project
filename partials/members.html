@@ -1,20 +1,18 @@
-<h3>We will be uploading a JSON file to display our members, in the data folder</h3>
-<h3>cant get text to center under the image. also want each photo to link to member profile page with all the info.</h3>
 <div class="container">
 	<div class="col-md-4" ng-repeat="member in members">
 		<p id="profilePic">
 			<a href=""><img src="img/profile.png" id="profilePic" height=200px width=300px></a>
 		</p>
-		<p>{{member.name}}
-		<br>{{member.position}}
-		<br>{{member.hometown}}
-		<br>{{member.grade}}
-		<br>{{member.major}}
-		<br>{{member.pc}}
-		<br>{{member.career}}
-		<br>{{member.pikeHelp}}
-		<br>{{member.majorIOA}}
-		<br>{{member.highSchool}}
-		<br>{{member.linkedIn}}
+		<p>Name: {{member.name}}
+		<br>Position: {{member.position}}
+		<br>Hometown: {{member.hometown}}
+		<br>High School: {{member.highSchool}}
+		<br>Year: {{member.grade}}
+		<br>Major: {{member.major}}
+		<br>Have you been accepted to your major: {{member.majorIOA}}
+		<br>Pledge Class: {{member.pc}}
+		<br>Career Aspiration: {{member.career}}
+		<br>How has Pike helped you: {{member.pikeHelp}}
+		<br>LinkedIn Profile: {{member.linkedIn}}
 	</div>
 </div>
