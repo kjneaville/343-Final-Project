@@ -138,6 +138,10 @@ form {
 	width:100%;
 }
 
+#profilePic {
+	text-align: center;
+}
+
 footer {
 	border-top: 3px solid rgb(255, 196, 37);
 	background-color: rgb(167, 158, 112);
@@ -199,6 +203,9 @@ footer {
 @media screen and (min-width: 992px) {
 			.frontHead {                                                                                                                                                                                                                                                                                                       
 				font-size: 4em;
+			}
+			#profilePic {
+				width: 100%;
 			}
 }
 
