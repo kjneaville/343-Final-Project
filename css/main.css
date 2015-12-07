@@ -42,6 +42,11 @@ nav {
 	border-bottom: 3px solid white;
 	
 }
+
+#mobile {
+	display: none;
+}
+
 li {
 	position: relative;
 	display: inline-block;
@@ -85,6 +90,11 @@ nav ul li:hover ul.dropdown {
 nav ul li:hover li.dropdown{
 	display:block;
 }
+
+i {
+	color: #fff;
+}
+
 header {
 	background-image: url(../img/PikeFrontOmegaFi2.png);
 	padding-top: 3em;
@@ -157,11 +167,24 @@ footer {
 			#motto {
 				display: none;
 			}
+
+			nav li {
+				display: block;
+			}
+
 			.headline svg {
 				display: none;
 			}
 			main {
 				padding-bottom: 50px;
+			}
+
+			#mobile {
+				display: inline-block;
+			}
+
+			#bigNav {
+				display: none;
 			}
 }
 
@@ -197,6 +220,10 @@ footer {
 			}
 			main {
 				padding-bottom: 30px;
+			}
+
+			#hamburger {
+				display: none;
 			}
 }
 

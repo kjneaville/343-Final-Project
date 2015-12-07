@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="PikeApp">
+<html lang="en" ng-app="PikeApp" ng-controller="MainCtrl">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,24 +11,45 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
 </head>
 <body>
-	<main ng-app="PikeApp" >
+	<main ng-app="PikeApp">
 		<a name="Top"></a>
-		<nav>
+		<nav id="bigNav">
 			<ul>
-				<li><a href="#/#Home">Home</a></li>
+				<li><a ng-href="#/#Home">Home</a></li>
 				<li>
 					<a>About<span class="caret"></span></a>
          			 <ul class="dropdown">
-            			<li><a href="#/House">House Information</a></li>
-            			<li><a href="#/SLAG">SLAG</a></li>
-           			    <li><a href="#/Beta-Beta">Beta Beta</a></li> 
+            			<li><a ng-href="#/House">House Information</a></li>
+            			<li><a ng-href="#/SLAG">SLAG</a></li>
+           			    <li><a ng-href="#/Beta-Beta">Beta Beta</a></li> 
           			</ul>
           		</li>
-				<li><a href="#/Events">Events</a></li>
-				<li><a href="#/History">History</a></li>
-				<li><a href="#/Members">Members</a></li>
-				<li><a href="#/Recruitment">Recruitment</a></li>
-				<li class="shop"><a href="#/Contact_Us">Contact</a></li>
+				<li><a ng-href="#/Events">Events</a></li>
+				<li><a ng-href="#/History">History</a></li>
+				<li><a ng-href="#/Members">Members</a></li>
+				<li><a ng-href="#/Recruitment">Recruitment</a></li>
+				<li class="shop"><a ng-href="#/Contact_Us">Contact</a></li>
+			</ul>		
+		</nav>
+		<nav id="mobile">
+			<ul>
+				<li id="hamburger"><i class="fa fa-bars" ng-click="hamburger()"></i></li>
+				<div id="nav">
+				<li><a ng-href="#/#Home" ng-click="hamburger()">Home</a></li>
+				<li><a ng-href="#/Events" ng-click="hamburger()">Events</a></li>
+				<li><a ng-href="#/History" ng-click="hamburger()">History</a></li>
+				<li><a ng-href="#/Members" ng-click="hamburger()">Members</a></li>
+				<li><a ng-href="#/Recruitment" ng-click="hamburger()">Recruitment</a></li>
+				<li class="shop"><a ng-href="#/Contact_Us" ng-click="hamburger()">Contact</a></li>
+				<li>
+					<a>About<span class="caret"></span></a>
+         			 <ul class="dropdown">
+            			<li><a ng-href="#/House" ng-click="hamburger()">House Information</a></li>
+            			<li><a ng-href="#/SLAG" ng-click="hamburger()">SLAG</a></li>
+           			    <li><a ng-href="#/Beta-Beta" ng-click="hamburger()">Beta Beta</a></li> 
+          			</ul>
+          		</li>
+			</div>
 
 			</ul>		
 		</nav>

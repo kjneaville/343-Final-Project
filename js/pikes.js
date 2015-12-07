@@ -5,18 +5,22 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 	$stateProvider.state('home', { //For homepage
 		url: '/',
 		templateUrl: 'partials/mainpartial.html',
+		controller: 'MainCtrl'
 	})
 	.state('house', { 			   //For orders page
 		url: '/House', 
 		templateUrl: 'partials/house.html',
+		controller: 'HouseCtrl'
 	})
 	.state('slag', {			   //For shopping cart
 		url: '/SLAG',
 		templateUrl: 'partials/slag.html',
+		controller: 'SlagCtrl'
 	})
 	.state('beta', {			   //For details of each bean
 			url: '/Beta-Beta',
 			templateUrl: 'partials/beta.html',
+			controller: 'BetaCtrl'
 	})
 	.state('events', {			   //For details of each bean
 			url: '/Events',
@@ -26,6 +30,7 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 	.state('history', {			   //For details of each bean
 			url: '/History',
 			templateUrl: 'partials/history.html',
+			controller: 'HistCtrl'
 	})
 	.state('members', {			   //For details of each bean
 			url: '/Members',
@@ -40,9 +45,43 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 	.state('contact', {			   //For details of each bean
 			url: '/Contact_Us',
 			templateUrl: 'partials/contact.html',
+			controller: 'ContactCtrl'
 	})
 	$urlRouterProvider.otherwise('/'); //All invalid addresses route to homepage
 })
+
+.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
+	var toggle = false;
+	document.getElementById("nav").style.display = "none";
+
+	$scope.hamburger = function() {
+		if(toggle && $(window).width() <= 768) {
+			toggle = false;
+			document.getElementById("nav").style.display = "none";
+		} else if(!toggle && $(window).width() <= 768) {
+			toggle = true;
+			document.getElementById("nav").style.display = "block";
+		}
+	}
+
+}])
+
+.controller('HouseCtrl', ['$scope', '$http', function($scope, $http) {
+
+}])
+
+.controller('SlagCtrl', ['$scope', '$http', function($scope, $http) {
+
+}])
+
+.controller('BetaCtrl', ['$scope', '$http', function($scope, $http) {
+	
+}])
+
+.controller('HistCtrl', ['$scope', '$http', function($scope, $http) {
+	
+}])
+
 .controller('MembersCtrl', ['$scope', '$http', function($scope, $http) {
 	$http.get('data/members.json').then(function(response) {
  		$scope.members = response.data;
@@ -77,6 +116,10 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 .controller('EventsCtrl', ['$scope', '$http', function($scope, $http){
 	
 }]) 
+
+.controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
+	
+}])
 
 
 
