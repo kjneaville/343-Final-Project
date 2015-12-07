@@ -7,51 +7,57 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 		templateUrl: 'partials/mainpartial.html',
 		controller: 'MainCtrl'
 	})
-	.state('house', { 			   //For orders page
+	.state('house', { 			   
 		url: '/House', 
 		templateUrl: 'partials/house.html',
 		controller: 'HouseCtrl'
 	})
-	.state('slag', {			   //For shopping cart
+	.state('slag', {			   
 		url: '/SLAG',
 		templateUrl: 'partials/slag.html',
 		controller: 'SlagCtrl'
 	})
-	.state('beta', {			   //For details of each bean
+	.state('beta', {			   
 			url: '/Beta-Beta',
 			templateUrl: 'partials/beta.html',
 			controller: 'BetaCtrl'
 	})
-	.state('events', {			   //For details of each bean
+	.state('events', {			   
 			url: '/Events',
 			templateUrl: 'partials/events.html',
 			controller: 'EventsCtrl'
 	})
-	.state('history', {			   //For details of each bean
+	.state('history', {			   
 			url: '/History',
 			templateUrl: 'partials/history.html',
 			controller: 'HistCtrl'
 	})
-	.state('members', {			   //For details of each bean
+	.state('members', {			   
 			url: '/Members',
 			templateUrl: 'partials/members.html',
 			controller: 'MembersCtrl'
 	})
-	.state('recruit', {			   //For details of each bean
+	.state('recruit', {			   
 			url: '/Recruitment',
 			templateUrl: 'partials/recruit.html',
 			controller: 'RecruitCtrl'
 	})
-	.state('contact', {			   //For details of each bean
+	.state('contact', {			   
 			url: '/Contact_Us',
 			templateUrl: 'partials/contact.html',
 			controller: 'ContactCtrl'
 	})
-    .state('login', {              //For details of each bean
+    .state('log', {              
             url: '/Login',
+            templateUrl: 'partials/login.html',
+            controller: 'LoginCtrl'
+    })
+    .state('login', {   
+            url: '/Login',           
             templateUrl: 'partials/memberlogin.html',
             controller: 'LoginCtrl'
     })
+    
 	$urlRouterProvider.otherwise('/'); //All invalid addresses route to homepage
 })
 
@@ -134,8 +140,68 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap']) //ngSanit
 	
 }])
 
-.controller('LoginCtrl', ['$scope', '$http', function($scope, $http) {
-    
+.controller('LoginCtrl', ['$scope', '$firebaseArray', '$firebaseObject', '$firebaseAuth', function($scope, $firebaseArray, $firebaseObject, $firebaseAuth) {
+
+    var ref = new Firebase("https://pikappaalphabetabeta.firebaseio.com");
+
+    var chirpsRef = ref.child('chirps'); //"chirps" object inside the JSON object
+    var usersRef = ref.child('users');
+
+    $scope.chirps = $firebaseArray(chirpsRef);
+    $scope.users = $firebaseObject(usersRef);
+
+    var Auth = $firebaseAuth(ref);
+
+    $scope.newUser = {}; //holds info about the new user we're creating
+
+        $scope.signIn = function() {
+      var promise = Auth.$authWithPassword({
+        'email': $scope.newUser.email,
+        'password': $scope.newUser.password
+      });
+      return promise;
+    }
+
+    //Make LogOut function available to views
+    $scope.logOut = function() {
+       Auth.$unauth(); //"unauthorize" to log out
+    };
+
+    //Any time auth status updates, set the userId so we know
+    Auth.$onAuth(function(authData) {
+       if(authData) { //if we are authorized
+          $scope.userId = authData.uid;
+       }
+       else {
+          $scope.userId = undefined;
+       }
+    });
+
+    //Test if already logged in (when page load)
+    var authData = Auth.$getAuth(); //get if we're authorized
+    if(authData) {
+       $scope.userId = authData.uid;
+    }
+
+    $scope.chirp = function(){
+      $scope.chirps.$add({
+        text:$scope.newChirp,
+        userId: $scope.userId,
+        likes:0,
+        time:Firebase.ServerValue.TIMESTAMP
+      }).then(function(){
+        $scope.newChirp = '';
+      })
+    }
+
+    // Function to like a tweet
+    $scope.like = function(chirp) {
+      if($scope.userId) {
+        chirp.likes += 1;
+        $scope.chirps.$save(chirp)
+      }
+    };
+
 }])
 
 
