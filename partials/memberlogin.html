@@ -8,7 +8,8 @@
     <div ng-show="userId" class="tweet-box write-tweet">
         <div>
             <!-- Show image of current user -->
-            <img class="image" src="img/profile.png"></img>
+            <img class="handleImage" src="img/profile.png"></img>
+            <p class="handleImage" >{{users[chirp.userId].handle}}</p>
 
             <!-- Form for writing tweets -->
             <form name="tweetForm" id="tweet-input">
@@ -34,7 +35,7 @@
             <div>
                 <!-- This is an img tag that shows the userImage of that chirp. -->
                 <!-- Note we access the avatar from the users object -->
-                <img class="image" src="img/profile.png"></img>
+                <img class="handleImage" src="img/profile.png"></img>
                 
                 <!-- Use an expressions to show the handle and time of tweet -->
                 <!-- format the time as a 'medium' -->

@@ -42,6 +42,9 @@ nav {
 	border-bottom: 3px solid white;
 	
 }
+#memLog {
+	float: right;
+}
 
 #mobile {
 	display: none;
@@ -172,6 +175,13 @@ form {
 	padding: 2em;
 	border-radius: 5px;
 	background-color: rgb(176,176,176);
+}
+.handleImage {
+	max-width: 50px;
+	max-height: 50px;
+	border-radius: 50%;
+	margin: 10px;
+	float: left;
 }
 
 footer {
