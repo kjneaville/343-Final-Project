@@ -1,5 +1,20 @@
 <div class="container">
-	<div class="col-md-4" ng-repeat="member in members">
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<div class ="container-fluid" id="memberSearch">
+				<div class="form-inline pull-right">
+					<label for="memberSearch" id="magLabel"><i class="fa fa-search"></i></label>
+					<label for="memberSearch" id="searchLabel">Search</label>
+				    <div class="form-group" id="memberSearchInput">
+				    	<input type="text" name="memberSearch" id="memberSearch" class="form-control" autofocus ng-model="searchMember">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4" ng-repeat="member in members | filter:searchMember">
 		<p id="profilePic">
 			<a href=""><img src="img/profile.png" id="profilePic" height=200px width=300px></a>
 		</p>

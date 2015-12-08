@@ -167,6 +167,7 @@ img {
 #profilePic {
 	text-align: center;
 }
+
 .subUserInfo {
 	display: inline-block;
 	text-align: center;
@@ -203,6 +204,16 @@ img {
 	text-align: center;
 	font-size: 12px;
 }
+
+#memberSearch {
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+}
+
+#searchLabel {
+	display: none;
+}
+
 #text-background {
 	max-width: 90%;
 	margin-top: 5%;
@@ -249,6 +260,15 @@ footer {
 			}
 
 			#bigNav {
+				display: none;
+			}
+
+			#searchLabel {
+				color: white;
+				display: inline;
+			}
+
+			#magLabel {
 				display: none;
 			}
 }
