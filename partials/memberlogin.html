@@ -1,4 +1,4 @@
-<main class="container">
+<main class="container subDiv">
     
     <!-- Sign in form -->
     <div ng-show="!userId" ng-include="'partials/login.html'"></div>
@@ -8,19 +8,20 @@
     <div ng-show="userId" class="tweet-box write-tweet">
         <div>
             <!-- Show image of current user -->
-            <img class="handleImage" src="img/profile.png"></img>
-            <p class="handleImage" >{{users[chirp.userId].handle}}</p>
+            <div class="container subUserInfo">
+                <img class="handleImage" src="img/profile.png"></img>
+                <h3 class="handle">{{users[userId].handle}}KJ</h3>
+                <button ng-click="logOut()" class="btn btn-warning">Logout</button>
+            </div>
 
             <!-- Form for writing tweets -->
             <form name="tweetForm" id="tweet-input">
 
-                <textarea placeholder="What's Happening..." name="text" class="form-control" ng-model="newChirp" required ng-maxlength="140"></textarea>
+                <textarea id="twitBox" placeholder="What's Happening..." name="text" class="form-control" ng-model="newChirp" required ng-maxlength="140"></textarea>
                 <p class="help-block" ng-show="tweetForm.text.$error.maxlength">140 character limit!</p>
                 
                 <div class="form-group send-tweet">
-                    <button type="submit" class="btn btn-primary" ng-click="chirp()" ng-disabled="tweetForm.$invalid">
-                        <i class="fa fa-pencil-square-o"></i> Share
-                    </button>
+                    <button type="submit" class="btn btn-primary" ng-click="chirp()" ng-disabled="tweetForm.$invalid">Share <i class="fa fa-bullhorn"></i></button>
                 </div>
             </form>
         </div>
@@ -32,27 +33,15 @@
         <!-- Use ng-repeat directive to repeat a div for each element in chirps -->
         <!-- order by time (in reverse chronological order) -->
         <div class="tweet-box" ng-repeat="chirp in chirps | orderBy : '-time'">
-            <div>
+            <div class="userPost">
                 <!-- This is an img tag that shows the userImage of that chirp. -->
                 <!-- Note we access the avatar from the users object -->
                 <img class="handleImage" src="img/profile.png"></img>
                 
                 <!-- Use an expressions to show the handle and time of tweet -->
                 <!-- format the time as a 'medium' -->
-                <span class="handle">{{users[chirp.userId].handle}}</span>
-                <span class="time">{{chirp.time | date:'medium'}}</span>
-            </div>
-
-            <!-- Use an expression to show the text of the tweet -->
-            <div class="tweet">{{chirp.text}}</div>
-            
-            <div class="likes">                 
-                <!-- Add a directive so that when the heart is clicked, it calls a function -->
-                <!-- You should pass in which chirp to like when you call the function -->
-                <i ng-click="like(chirp)" class="fa fa-heart"></i>
-                
-                <!-- Use an expression to show the number of likes -->
-                <span>{{chirp.likes}}</span>
+                <span class="handle">{{users[chirp.userId].handle}}Random Guy</span>
+                <div class="tweet">{{chirp.text}}<br><span class="time">{{chirp.time | date:'medium'}}</span><br><i ng-click="like(chirp)" class="fa fa-thumbs-o-up"></i><span>{{chirp.likes}}  </span><i class="fa fa-thumbs-o-down space"></i><span>{{chirp.likes}}</span><i class="fa fa-comment-o space"></i><br></div>
             </div>
         </div>
     </div> <!-- end shown results -->

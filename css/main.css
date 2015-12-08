@@ -15,17 +15,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	color: black;
-	text-align: left;
+	color: rgb(152, 0, 48);
+	text-align: center;
+	text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
 
 h2 {
-	color: #bc6026;
+	color: white;
 	text-align: left;
 	font-size: 20px;
 	color: #d87e28;
 }
-p {
+h3 {
+	color: white;
+	text-shadow: -1px 0 rgb(152, 0, 48), 0 1px rgb(152, 0, 48), 1px 0 rgb(152, 0, 48), 0 -1px rgb(152, 0, 48);
+}
+p, #slagTitle {
 	text-align: center;
 	color: white;
 	padding-left: 1em;
@@ -111,16 +116,18 @@ header {
 	padding: 1em;
 }
 .contactDiv {
-	background: gray;
+	background: #333333;
 	border-radius: 5px;
+}
+.subDiv {
+	background: #C8C8C8;
+	border-radius: 5px;
+	margin-top: 20px;
 }
 a{
 	color:black;
 }
-#rushPikejpg {
-	width: 100%;
-}
-#houseInfoPic, #googmap {
+#houseInfoPic, #googmap, #flag {
 	width: 70%;
 	margin-left:15%;
 	margin-right:15%;
@@ -133,55 +140,76 @@ form {
 	margin-right: auto;
 	margin-left: auto;
 }
+img {
+	margin-right: auto;
+	margin-left: auto;
+}
 
-#rushForm input, select {
+#rushForm input, select, #logForm input  {
 	text-align: center;
-	max-width: 50%;
 	width: 100%;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 4px;
 }
-
-#logForm input {
-	text-align: center;
-	max-width: 50%;
-	width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
 #calendar {
 	width:100%;
+}
+.fillForm {
+	width: 100%;
+	background-image: url('../img/rushPike.jpg');
 }
 
 #profilePic {
 	text-align: center;
 }
-
+.subUserInfo {
+	display: inline-block;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.handleImage {
+	max-width: 50px;
+	max-height: 50px;
+	border-radius: 50%;
+}
+.userPost {
+	margin-bottom: 10px;
+}
+.handle {
+	font-size:20px;
+	color: black;
+}
+#twitBox {
+	margin-left: auto;
+	margin-right: auto;
+}
+.send-tweet {
+	padding: 20px;
+	text-align: center;
+}
+.tweet {
+	text-align: center;
+}
+.space {
+	margin-left: 10px;
+}
+.time {
+	text-align: center;
+	font-size: 12px;
+}
 #text-background {
 	max-width: 90%;
 	margin-top: 5%;
 	margin-bottom: 5%;
 	padding: 2em;
 	border-radius: 5px;
-	background-color: rgb(176,176,176);
-}
-.handleImage {
-	max-width: 50px;
-	max-height: 50px;
-	border-radius: 50%;
-	margin: 10px;
-	float: left;
+	background-color: #333333;
 }
 
 footer {
@@ -196,9 +224,6 @@ footer {
 }
 			
 @media screen and (max-width: 768px) {
-			#motto {
-				display: none;
-			}
 
 			nav li {
 				display: block;
@@ -207,10 +232,18 @@ footer {
 			.headline svg {
 				display: none;
 			}
+			#motto {
+				display: none;
+			}
 			main {
 				padding-bottom: 50px;
 			}
-
+			#rushForm input, select, #logForm input  {
+				max-width: 80%;
+			}
+			#twitBox {
+				width: 80%;
+			}
 			#mobile {
 				display: inline-block;
 			}
@@ -223,6 +256,10 @@ footer {
 @media screen and (min-width: 768px) {
 			body {
 				font-size: 20px;
+			}
+			.frontHead {                                                                                                                                                                                                                                                                                                       
+				font-size: 3em;
+				margin-top: 50px;
 			}	
 			h2 {
 				text-align: center;
@@ -235,6 +272,9 @@ footer {
 			li a {
 				padding-left: 1em;
 				padding-right: 1em;
+			}
+			#twitBox {
+				width: 50%;
 			}
 			.frontPage {
 				min-height: 450px;
@@ -253,6 +293,9 @@ footer {
 			main {
 				padding-bottom: 30px;
 			}
+			#rushForm input, select, #logForm input  {
+				max-width: 50%;
+			}
 
 			#hamburger {
 				display: none;
@@ -261,7 +304,18 @@ footer {
 
 @media screen and (min-width: 992px) {
 			.frontHead {                                                                                                                                                                                                                                                                                                       
-				font-size: 4em;
+				font-size: 5em;
+			}
+			#twitBox {
+				width: 45%;
+			}
+			#motto {
+				font-size: 2em;
+				font-weight: bold;
+				text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+			}
+			#rushForm input, select, #logForm input  {
+				max-width: 40%;
 			}
 			#profilePic {
 				height: auto;
@@ -270,4 +324,14 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
+			.frontHead {                                                                                                                                                                                                                                                                                                       
+						font-size: 6em;
+					}
+			#twitBox {
+				width: 40%;
+			}
+			#rushForm input, select, #logForm input  {
+				max-width: 20%;
+			}
+
 }
