@@ -41,7 +41,7 @@
                 <!-- Use an expressions to show the handle and time of tweet -->
                 <!-- format the time as a 'medium' -->
                 <span class="handle">{{users[chirp.userId].handle}}Random Guy</span>
-                <div class="tweet">{{chirp.text}}<br><span class="time">{{chirp.time | date:'medium'}}</span><br><i ng-click="like(chirp)" class="fa fa-thumbs-o-up"></i><span>{{chirp.likes}}  </span><i class="fa fa-thumbs-o-down space"></i><span>{{chirp.likes}}</span><i class="fa fa-comment-o space"></i><br></div>
+                <div class="tweet">{{chirp.text}}<br><span class="time">{{chirp.time | date:'medium'}}</span><br><i ng-click="like(chirp)" class="fa fa-thumbs-o-up"></i><span>{{chirp.likes}}  </span><i ng-click="dislike(chirp)" class="fa fa-thumbs-o-down space"></i><span>{{chirp.dislikes}}</span><i class="fa fa-comment-o space"></i><span>{{chirp.comments}}</span></div>
             </div>
         </div>
     </div> <!-- end shown results -->

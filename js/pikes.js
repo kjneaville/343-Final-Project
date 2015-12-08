@@ -192,6 +192,8 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
         text:$scope.newChirp,
         userId: $scope.userId,
         likes:0,
+        dislikes:0,
+        comments:0,
         time:Firebase.ServerValue.TIMESTAMP
       }).then(function(){
         $scope.newChirp = '';
@@ -202,6 +204,12 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
     $scope.like = function(chirp) {
       if($scope.userId) {
         chirp.likes += 1;
+        $scope.chirps.$save(chirp)
+      }
+    };
+    $scope.dislike = function(chirp) {
+      if($scope.userId) {
+        chirp.dislikes += 1;
         $scope.chirps.$save(chirp)
       }
     };
