@@ -30,6 +30,9 @@ h3 {
 	color: white;
 	text-shadow: -1px 0 rgb(152, 0, 48), 0 1px rgb(152, 0, 48), 1px 0 rgb(152, 0, 48), 0 -1px rgb(152, 0, 48);
 }
+h4{
+	color: white;
+}
 p, #slagTitle {
 	text-align: center;
 	color: white;
@@ -125,7 +128,7 @@ header {
 	margin-top: 20px;
 }
 a{
-	color:black;
+	color: #66ccff;
 }
 #houseInfoPic, #googmap, #flag {
 	width: 70%;
