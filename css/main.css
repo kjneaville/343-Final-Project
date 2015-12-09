@@ -170,6 +170,11 @@ img {
     border: 2px solid #ccc;
     border-radius: 4px;
 }
+
+.btn {
+	margin-bottom: 15px;
+}
+
 #calendar {
 	width:100%;
 }
