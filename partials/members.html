@@ -16,18 +16,17 @@
 	</div>
 	<div class="col-md-4" ng-repeat="member in members | filter:searchMember">
 		<p id="profilePic">
-			<a href=""><img src="img/profile.png" id="profilePic" height=200px width=300px></a>
+			<a href="{{member.linkedin}}"><img src="img/profile.png" id="profilePic" height=200px width=300px></a>
 		</p>
 		<p><em>Name:</em> {{member.name}}
 		<br><em>Position:</em> {{member.position}}
 		<br><em>Hometown:</em> {{member.hometown}}
-		<br><em>High School:</em> {{member.highSchool}}
+		<br><em>High School:</em> {{member.highschool}}
 		<br><em>Year:</em> {{member.grade}}
 		<br><em>Major:</em> {{member.major}}
-		<br><em>Have you been accepted to your major:</em> {{member.majorIOA}}
+		<br><em>Have you been accepted to your major:</em> {{member.majorioa}}
 		<br><em>Pledge Class:</em> {{member.pc}}
 		<br><em>Career Aspiration:</em> {{member.career}}
-		<br><em>How has Pike helped you:</em> {{member.pikeHelp}}
-		<br><em>LinkedIn Profile:</em> {{member.linkedIn}}
+		<br><em>How has Pike helped you:</em> {{member.pikehelp}}
 	</div>
 </div>
