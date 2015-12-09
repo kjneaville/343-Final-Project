@@ -28,10 +28,18 @@ h2 {
 }
 h3 {
 	color: white;
+	font size: 25px;
 	text-shadow: -1px 0 rgb(152, 0, 48), 0 1px rgb(152, 0, 48), 1px 0 rgb(152, 0, 48), 0 -1px rgb(152, 0, 48);
 }
-h4{
+.centerAlign {
+	text-align: center;
+}
+.mainTitle{
 	color: white;
+	text-align: center;
+	font-size: 1.5em;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	padding: 1%;
 }
 p, #slagTitle {
 	text-align: center;
@@ -52,6 +60,9 @@ nav {
 }
 #memLog {
 	float: right;
+}
+.conPage {
+	text-shadow: none;
 }
 
 #mobile {
