@@ -51,7 +51,7 @@ nav {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 5;
+	z-index: 500000;
 	background-color: rgba(168, 158, 110, 0.8);
 	display: inline-block;
 	width: 100%;
@@ -246,6 +246,7 @@ footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	z-index: 500000;
 }
 			
 @media screen and (max-width: 768px) {
