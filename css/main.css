@@ -237,6 +237,11 @@ img {
 	background-color: #333333;
 }
 
+#socials {
+	font-size: 20px;
+	margin-bottom: 0.25em;
+}
+
 footer {
 	border-top: 3px solid rgb(255, 196, 37);
 	background-color: rgb(167, 158, 112);
@@ -344,6 +349,9 @@ footer {
 			}
 			#hamburger {
 				display: none;
+			}
+			#socials{
+				text-align: right;
 			}
 }
 
