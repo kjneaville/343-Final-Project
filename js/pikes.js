@@ -266,7 +266,17 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
       });
     }
 }])
-.controller('SelectModalCtrl', function($scope, $http, $uibModalInstance) {
+.controller('SelectModalCtrl', ['$scope', '$http', '$firebaseArray', '$firebaseObject', '$firebaseAuth', '$uibModalInstance', function($scope, $http, $firebaseArray, $firebaseObject, $firebaseAuth, $uibModalInstance) {
+    var ref = new Firebase("https://pikappaalphabetabeta.firebaseio.com");
+
+    var chirpsRef = ref.child('chirps'); //"chirps" object inside the JSON object
+    var usersRef = ref.child('users');
+
+    $scope.chirps = $firebaseArray(chirpsRef);
+    $scope.users = $firebaseObject(usersRef);
+
+    var Auth = $firebaseAuth(ref);
+
   $scope.changePass = function() {
     ref.changePassword({
       email: $scope.upDate,
@@ -288,11 +298,12 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
         console.log("User password changed successfully!");
       }
     }
-  )}
+  )};
+
   $scope.cancel = function () {
      $uibModalInstance.dismiss('cancel');
   };
-})
+}])
 
 
 
