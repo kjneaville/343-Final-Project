@@ -351,19 +351,6 @@
         "linkedin": "https://www.linkedin.com/in/cray-bryan-2215b110b"
     },
     {
-        "name": "Mickey Kazmi",
-        "position": "New Member",
-        "hometown": "Bakersfield, CA",
-        "grade": "Freshman",
-        "major": "Public Health",
-        "pc": "PC 15",
-        "career": "Health Administrator",
-        "pikehelp": "PIKE so far has developed a view and stance upon how I approach life obstacles and challenges. With a diversity of people within the organization, I really learned how to cope with differing opinions and lifestyles. I have much more to learn still as a new member, and I'm eagerly waiting to see what is to come. ",
-        "highschool": "Stockdale High School",
-        "majorioa": "Intended",
-        "linkedin": "https://www.linkedin.com/in/mikaeel-kazmi-3613ab108"
-    },
-    {
         "name": "Jeremy Kyle Russell",
         "position": "External Vice President",
         "hometown": "Santa Monica, CA",
@@ -390,18 +377,19 @@
         "linkedin": "www.linkedin.com/in/mercadoandy"
     },
     {
-        "name": "Erik Peterson",
-        "position": "Member",
-        "hometown": "Seattle, WA",
-        "grade": "Junior",
-        "major": "International Security",
-        "pc": "PC 13",
-        "career": "Foreign Service/Dept. of Diplomatic Security",
-        "pikehelp": "Pi Kappa Alpha has helped me with my social skills between people, and has allowed me to recognize my talents and apply them to the real world. Both Academically and Athletically, Pi Kappa Alpha has played a vital role in my college career. However most importantly, beyond any career or academic advantages I've acquired through this fraternity, I will have a group of brothers who will always be there for me until I die; and that is what brotherhood truly stands for. ",
-        "highschool": "Lincoln High School",
+        "name": "Mickey Kazmi",
+        "position": "New Member",
+        "hometown": "Bakersfield, CA",
+        "grade": "Freshman",
+        "major": "Public Health",
+        "pc": "PC 15",
+        "career": "Health Administrator",
+        "pikehelp": "PIKE so far has developed a view and stance upon how I approach life obstacles and challenges. With a diversity of people within the organization, I really learned how to cope with differing opinions and lifestyles. I have much more to learn still as a new member, and I'm eagerly waiting to see what is to come. ",
+        "highschool": "Stockdale High School",
         "majorioa": "Intended",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/mikaeel-kazmi-3613ab108"
     },
+    
     {
         "name": "Alexander Smout",
         "position": "Member",
@@ -427,6 +415,19 @@
         "highschool": "Northwood High School",
         "majorioa": "Already Accepted",
         "linkedin": "www.linkedin.com/in/codytyo"
+    },
+    {
+        "name": "Erik Peterson",
+        "position": "Member",
+        "hometown": "Seattle, WA",
+        "grade": "Junior",
+        "major": "International Security",
+        "pc": "PC 13",
+        "career": "Foreign Service/Dept. of Diplomatic Security",
+        "pikehelp": "Pi Kappa Alpha has helped me with my social skills between people, and has allowed me to recognize my talents and apply them to the real world. Both Academically and Athletically, Pi Kappa Alpha has played a vital role in my college career. However most importantly, beyond any career or academic advantages I've acquired through this fraternity, I will have a group of brothers who will always be there for me until I die; and that is what brotherhood truly stands for. ",
+        "highschool": "Lincoln High School",
+        "majorioa": "Intended",
+        "linkedin": ""
     },
     {
         "name": "Erik Peterson",
