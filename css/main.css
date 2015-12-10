@@ -137,6 +137,9 @@ header {
 	background: #C8C8C8;
 	border-radius: 5px;
 	margin-top: 20px;
+	border-style: groove;
+	border-color: #383838;
+	border-width: 5px;
 }
 a{
 	color: #66ccff;
@@ -247,6 +250,24 @@ img {
 	font-size: 20px;
 	margin-bottom: 0.25em;
 }
+.modalBody {
+	display: inline;
+}
+.left {
+    width: 30%;
+    float: left;
+    text-align: right;
+}
+.right {
+    width: 65%;
+    margin-left: 10px;
+    float:left;
+}
+.vertical-alignment-helper {
+    position: fixed;
+    top: 40%; /* This makes sure that we can still click outside of the modal to close it */
+}
+
 
 footer {
 	border-top: 3px solid rgb(255, 196, 37);

@@ -11,7 +11,8 @@
             <div class="container subUserInfo">
                 <img class="handleImage" src="img/profile.png"></img>
                 <h3 class="handle">{{users[userId].handle}}</h3>
-                <button ng-click="logOut()" class="btn btn-warning">Logout</button>
+                <button ng-click="logOut()" class="btn btn-danger">Logout</button><br>
+                <button data-toggle="modal" data-target="#myModal" ng-click="openModal()" class="btn btn-warning .btn-xs">Change Password</button>
             </div>
 
             <!-- Form for writing tweets -->

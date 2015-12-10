@@ -140,7 +140,7 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
 	
 }])
 
-.controller('LoginCtrl', ['$scope', '$firebaseArray', '$firebaseObject', '$firebaseAuth', '$location', function($scope, $firebaseArray, $firebaseObject, $firebaseAuth, $location) {
+.controller('LoginCtrl', ['$scope', '$firebaseArray', '$firebaseObject', '$firebaseAuth', '$location', '$uibModal', function($scope, $firebaseArray, $firebaseObject, $firebaseAuth, $location, $uibModal) {
 
     var ref = new Firebase("https://pikappaalphabetabeta.firebaseio.com");
 
@@ -236,8 +236,63 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
       }
     };
 
+    $scope.changePass = function() {
+    ref.changePassword({
+      email: "bobtony@firebase.com",
+      oldPassword: "correcthorsebatterystaple",
+      newPassword: "shinynewpassword"
+    }, function(error) {
+      if (error) {
+        switch (error.code) {
+          case "INVALID_PASSWORD":
+            console.log("The specified user account password is incorrect.");
+            break;
+          case "INVALID_USER":
+            console.log("The specified user account does not exist.");
+            break;
+          default:
+            console.log("Error changing password:", error);
+        }
+      } else {
+        console.log("User password changed successfully!");
+      }
+    }
+  )}
+    $scope.openModal = function() { //Opens the modal saying that the order has been added to the shopping cart
+      var modalInstance = $uibModal.open({
+         templateUrl: 'partials/settings-modal.html',
+         controller: 'SelectModalCtrl',
+         scope: $scope //pass in all our scope variables!
+      });
+    }
 }])
-
+.controller('SelectModalCtrl', function($scope, $http, $uibModalInstance) {
+  $scope.changePass = function() {
+    ref.changePassword({
+      email: "bobtony@firebase.com",
+      oldPassword: "correcthorsebatterystaple",
+      newPassword: "shinynewpassword"
+    }, function(error) {
+      if (error) {
+        switch (error.code) {
+          case "INVALID_PASSWORD":
+            console.log("The specified user account password is incorrect.");
+            break;
+          case "INVALID_USER":
+            console.log("The specified user account does not exist.");
+            break;
+          default:
+            console.log("Error changing password:", error);
+        }
+      } else {
+        console.log("User password changed successfully!");
+      }
+    }
+  )}
+  $scope.cancel = function () {
+     $uibModalInstance.dismiss('cancel');
+  };
+})
 
 
 
