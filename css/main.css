@@ -41,7 +41,13 @@ h3 {
 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 	padding: 1%;
 }
-p, #slagTitle {
+p {
+	text-align: left;
+	color: white;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+#slagTitle {
 	text-align: center;
 	color: white;
 	padding-left: 1em;
@@ -274,6 +280,10 @@ img {
 #fireLogo {
 	position: relative;
 	top: 250px;
+}
+#recruitTitle {
+	text-align: center;
+	color: white;
 }
 
 footer {
