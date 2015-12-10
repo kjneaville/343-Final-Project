@@ -156,16 +156,38 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
         $location.path(url);
     }
 
-    //$scope.newUser = {}; //holds info about the new user we're creating
+    $scope.newUser = {};
 
     $scope.signIn = function() {
+      ref.authWithPassword({
+          email    : $scope.newUser.email,
+          password : $scope.newUser.password
+        }, function(error, authData) {
+          if (error) {
+            alert("You must be a member of the Beta Beta chapter");
+          } else {
+            console.log("Success!");
+            $scope.signI;
+            var newUserInfo = {
+                'handle': $scope.newUser.handle,
+            }
+            console.log("Success2!");
+            $scope.users[authData.uid] = newUserInfo;
+            $scope.users.$save();
+            $scope.userId = authData.uid; 
+            window.location.href = '#/Members-Area';
+          }
+        }
+        
+      )
+    }
+    $scope.signI = function() {
       var promise = Auth.$authWithPassword({
         'email': $scope.newUser.email,
         'password': $scope.newUser.password
       });
       return promise;
     }
-
     //Make LogOut function available to views
     $scope.logOut = function() {
        Auth.$unauth(); //"unauthorize" to log out
