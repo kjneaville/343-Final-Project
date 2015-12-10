@@ -22,7 +22,7 @@
         "career": "Doctor",
         "pikehelp": "The friendships and opportunities that pike has given me have allowed me to create strong bonds with my fellow brothers and my school.",
         "highschool": "N/A",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": ""
     },
     {
@@ -35,20 +35,7 @@
         "career": "Sustainable energy/restoration researcher",
         "pikehelp": "Pikes has given me a chance to extend my family and gain bonds that will last me the rest of my life. I never feel like I am alone because I know I will always have my brothers to have my back no matter what.",
         "highschool": "Lake Washington High School",
-        "majorioa": "Already Accepted",
-        "linkedin": ""
-    },
-    {
-        "name": "Erian Gutierrez",
-        "position": "Fire Marshall ",
-        "hometown": "Yakima, WA",
-        "grade": "Sophomore",
-        "major": "Economics / International Studies",
-        "pc": "PC 14",
-        "career": "FBI or CIA Secret Agent",
-        "pikehelp": "Pike has helped me discover my full potential. Because of Pike my leadership skills and work ethic have skyrocketed, helping me both in school, work, and my personal life.",
-        "highschool": "Davis High School",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": ""
     },
     {
@@ -74,7 +61,20 @@
         "career": "Financial Consultant or Advertisment",
         "pikehelp": "PIKE has helped me become more comfortable with myself and really learn who I was. Without PIKE, I would have never started powerlifting or known what I really wanted to do in life. ",
         "highschool": "N/A",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
+        "linkedin": ""
+    },
+    {
+        "name": "Erian Gutierrez",
+        "position": "Fire Marshall ",
+        "hometown": "Yakima, WA",
+        "grade": "Sophomore",
+        "major": "Economics / International Studies",
+        "pc": "PC 14",
+        "career": "FBI or CIA Secret Agent",
+        "pikehelp": "Pike has helped me discover my full potential. Because of Pike my leadership skills and work ethic have skyrocketed, helping me both in school, work, and my personal life.",
+        "highschool": "Davis High School",
+        "majorioa": "Accepted",
         "linkedin": ""
     },
     {
@@ -100,7 +100,7 @@
         "career": "CPA",
         "pikehelp": "Pi Kappa Alpha has taught me balance: balance between school, my social life, and extracurricular activities. Pikes had also helped me meet more people and make life long connections. ",
         "highschool": "N/A",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": ""
     },
     {
@@ -126,7 +126,7 @@
         "career": "Surgeon",
         "pikehelp": "Pike has taught me a lot about personal responsibility. Coming into college, I struggled a lot with time management but by surrounding myself with mature, smart men I learned how to prioritize between work, school, social events, and philanthropy. ",
         "highschool": "Redmond High School",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": ""
     },
     {
@@ -139,7 +139,7 @@
         "career": "ISO or SCO",
         "pikehelp": "Pike gives me connections all over the world. One might just help me with my career someday. ",
         "highschool": "N/A",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": ""
     },
     {
@@ -165,7 +165,7 @@
         "career": "Police officer and marketing ",
         "pikehelp": "I've been able to serve in a multitude of positions that has helped sculpt me into the person and leader I want to be. I try to incorporate our ideals in my everyday life and I believe it helps me strive for greatness. ",
         "highschool": "Lincoln High School",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": ""
     },
     {
@@ -191,7 +191,7 @@
         "career": "Government ",
         "pikehelp": "Pike has helped me to appreciate the differences and perspectives of others, regardless of their backgrounds. I can attest that Pike has taught me valuable lessons in humility, academic stability, and even has facilitated the spark in interest in my intended career path. Pondering on fraternity life is a personal experience that every college male should consider carefully, as I know Pike has transformed me into a much more versatile, proactive man.",
         "highschool": "Mercer Island High School",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": ""
     },
     {
@@ -217,7 +217,7 @@
         "career": "Chemical Industry",
         "pikehelp": "Pike has given me friends for life. Every moment I have been in the fraternity has made me into a better man, and it has shaped me into who I am today.",
         "highschool": "Kennedy Catholic High School",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": ""
     },
     {
@@ -243,8 +243,21 @@
         "career": "Software Developer",
         "pikehelp": "Pike has given me a network of friends and resources that I can rely on for anything. I have learned how to put aside differences with people and work towards mutual goals.",
         "highschool": "Jackson High School",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": "https://www.linkedin.com/in/kenneth-kj-neaville-612628b7"
+    },
+    {
+        "name": "Emerson Matson",
+        "position": "Member",
+        "hometown": "Tacoma, WA",
+        "grade": "Junior",
+        "major": "Computer Science and Chemistry",
+        "pc": "PC 13",
+        "career": "Radiologist",
+        "pikehelp": "Pike has helped me realize that there is a lot more to college than just academics. We all come to college thinking that we will sit down and study all day in order to get through this experience and move onto the next part of our Lives. But this experience is more than just that, but a development process to help become better versions of ourselves in multiple facets of our Lives through SLAG. It has also helped me to inspire others to take on more involved roles in our academic community.",
+        "highschool": "Franklin Pierce High School",
+        "majorioa": "Accepted",
+        "linkedin": "https://github.com/emersonn"
     },
     {
         "name": "Jack Gularte",
@@ -258,19 +271,6 @@
         "highschool": "Mt. Spokane High School",
         "majorioa": "Intended",
         "linkedin": "https://www.linkedin.com/in/jack-gularte-65839110b"
-    },
-    {
-        "name": "Emerson Matson",
-        "position": "Member",
-        "hometown": "Tacoma, WA",
-        "grade": "Junior",
-        "major": "Computer Science and Chemistry",
-        "pc": "PC 13",
-        "career": "Radiologist",
-        "pikehelp": "Pike has helped me realize that there is a lot more to college than just academics. We all come to college thinking that we will sit down and study all day in order to get through this experience and move onto the next part of our Lives. But this experience is more than just that, but a development process to help become better versions of ourselves in multiple facets of our Lives through SLAG. It has also helped me to inspire others to take on more involved roles in our academic community.",
-        "highschool": "Franklin Pierce High School",
-        "majorioa": "Already Accepted",
-        "linkedin": "https://github.com/emersonn"
     },
     {
         "name": "Joseph Watanabe-Gastel",
@@ -299,6 +299,19 @@
         "linkedin": ""
     },
     {
+        "name": "Alex Azera",
+        "position": "New Member",
+        "hometown": "Los Angele, CA",
+        "grade": "Freshman",
+        "major": "Finance",
+        "pc": "PC 15",
+        "career": "Financial Consulting",
+        "pikehelp": "My experiences at Pike have redefined the meaning of teamwork and personal responsibility. I have learned incredible time management and am always pushed to do and be better.",
+        "highschool": "Notre Dame High School",
+        "majorioa": "Accepted",
+        "linkedin": "https://www.linkedin.com/profile/view?id=AAIAABpUY1IB-BX-q994D0-qpcdrbENh16CmXw0&trk=nav_responsive_tab_profile_pic"
+    },
+    {
         "name": "Kyle Dige",
         "position": "Athletics Chairman",
         "hometown": "Maple Valley, WA",
@@ -310,19 +323,6 @@
         "highschool": "Tahoma Senior High School",
         "majorioa": "Intended",
         "linkedin": ""
-    },
-    {
-        "name": "Alex Azera",
-        "position": "New Member",
-        "hometown": "Los Angele, CA",
-        "grade": "Freshman",
-        "major": "Finance",
-        "pc": "PC 15",
-        "career": "Financial Consulting",
-        "pikehelp": "My experiences at Pike have redefined the meaning of teamwork and personal responsibility. I have learned incredible time management and am always pushed to do and be better.",
-        "highschool": "Notre Dame High School",
-        "majorioa": "Already Accepted",
-        "linkedin": "https://www.linkedin.com/profile/view?id=AAIAABpUY1IB-BX-q994D0-qpcdrbENh16CmXw0&trk=nav_responsive_tab_profile_pic"
     },
     {
         "name": "Parker Shirreff ",
@@ -373,7 +373,7 @@
         "career": "Social Work/ Family and Youth Services",
         "pikehelp": "PIKE has given me the opportunity to develop my skills in leadership and communication. The fraternity has also allowed me to maintain a healthy lifestyle by having a strong focus on athletics in intramural competitions as well as philanthropy tournaments. ",
         "highschool": "Franklin High School ",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": "www.linkedin.com/in/mercadoandy"
     },
     {
@@ -400,7 +400,7 @@
         "career": "Public Relations",
         "pikehelp": "Pike has helped me make social and professional connections that would have otherwise been impossible to establish. Through this house, I now have contacts and a network that will last me a lifetime.",
         "highschool": "Seattle Christian",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": ""
     },
     {
@@ -413,21 +413,8 @@
         "career": "Marketing/Public Relations Manager, Sports Journalist, or Government Employee",
         "pikehelp": "The friendships and connections that I have built in less than two years at PIKE have already improved my college experience more than I had ever imagined. It's provided me with some of the best times of my life and it has helped me become a more outgoing and well-rounded person. PIKE has helped me find my second home in Seattle.",
         "highschool": "Northwood High School",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": "www.linkedin.com/in/codytyo"
-    },
-    {
-        "name": "Erik Peterson",
-        "position": "Member",
-        "hometown": "Seattle, WA",
-        "grade": "Junior",
-        "major": "International Security",
-        "pc": "PC 13",
-        "career": "Foreign Service/Dept. of Diplomatic Security",
-        "pikehelp": "Pi Kappa Alpha has helped me with my social skills between people, and has allowed me to recognize my talents and apply them to the real world. Both Academically and Athletically, Pi Kappa Alpha has played a vital role in my college career. However most importantly, beyond any career or academic advantages I've acquired through this fraternity, I will have a group of brothers who will always be there for me until I die; and that is what brotherhood truly stands for. ",
-        "highschool": "Lincoln High School",
-        "majorioa": "Intended",
-        "linkedin": ""
     },
     {
         "name": "Erik Peterson",
@@ -465,7 +452,7 @@
         "career": "Networking and Wireless",
         "pikehelp": "PIKE has helped me in all aspects of my life. From having motivated people always around me helping me succeed in both school and my personal life, to gaining school skills that will last me through the rest of my life. I give a lot of credit to PIKE for getting me to where I am now.",
         "highschool": "Issaquah High School",
-        "majorioa": "Already Accepted",
+        "majorioa": "Accepted",
         "linkedin": "https://www.linkedin.com/in/nicholasjmontgomery"
     }
 ]
