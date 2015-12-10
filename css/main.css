@@ -302,6 +302,11 @@ footer {
 			#magLabel {
 				display: none;
 			}
+			#calendar {
+				position: fixed;
+				left: 5%;
+				width: 90%;
+			}
 }
 
 @media screen and (min-width: 768px) {
@@ -358,6 +363,11 @@ footer {
 			}
 			#socials{
 				text-align: right;
+			}
+			#calendar {
+				position: fixed;
+				left: 10%;
+				width: 80%;
 			}
 }
 
