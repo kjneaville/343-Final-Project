@@ -170,6 +170,7 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
             $scope.signI;
             var newUserInfo = {
                 'handle': $scope.newUser.handle,
+                'image': "img/profile.png",
             }
             console.log("Success2!");
             $scope.users[authData.uid] = newUserInfo;
@@ -188,9 +189,27 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
       });
       return promise;
     }
+     $scope.savIn = function() {
+      ref.authWithPassword({
+          email    : $scope.returnEmail,
+          password : $scope.returnPass,
+        }, function(error, authData) {
+          if (error) {
+            alert("You must be a member of the Beta Beta chapter");
+          } else {
+            console.log("Success!");
+            $scope.signI;
+            $scope.userId = authData.uid; 
+            window.location.href = '#/Members-Area';
+          }
+        }
+        
+      )
+    }
     //Make LogOut function available to views
     $scope.logOut = function() {
        Auth.$unauth(); //"unauthorize" to log out
+       window.location.href = '#/Login';
     };
 
     //Any time auth status updates, set the userId so we know
@@ -211,7 +230,7 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
 
     $scope.chirp = function(){
       $scope.chirps.$add({
-        text:$scope.newChirp,
+        text: $scope.newChirp,
         userId: $scope.userId,
         likes:0,
         dislikes:0,
@@ -286,19 +305,32 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
       if (error) {
         switch (error.code) {
           case "INVALID_PASSWORD":
-            console.log("The specified user account password is incorrect.");
+            alert("The specified user account password is incorrect.");
             break;
           case "INVALID_USER":
-            console.log("The specified user account does not exist.");
+            alert("The specified user account does not exist.");
             break;
           default:
-            console.log("Error changing password:", error);
+            alert("Error changing password:", error);
         }
       } else {
-        console.log("User password changed successfully!");
+        alert("You have successfully changed your password");
       }
     }
   )};
+  $scope.changeHand = function() {
+    var hopperRef = usersRef.child($scope.userId);
+       hopperRef.update({
+        'handle': $scope.handl,
+      });
+  }
+
+  $scope.changePic = function() {
+    var hopperRef = usersRef.child($scope.userId);
+       hopperRef.update({
+        'image': $scope.picUrl,
+      });
+  }
 
   $scope.cancel = function () {
      $uibModalInstance.dismiss('cancel');
