@@ -66,10 +66,10 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
 	document.getElementById("nav").style.display = "none";
 
 	$scope.hamburger = function() {
-		if(toggle && $(window).width() <= 768) {
+		if(toggle && $(window).width() <= 992) {
 			toggle = false;
 			document.getElementById("nav").style.display = "none";
-		} else if(!toggle && $(window).width() <= 768) {
+		} else if(!toggle && $(window).width() <= 992) {
 			toggle = true;
 			document.getElementById("nav").style.display = "block";
 		}
@@ -269,9 +269,9 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
 .controller('SelectModalCtrl', function($scope, $http, $uibModalInstance) {
   $scope.changePass = function() {
     ref.changePassword({
-      email: "bobtony@firebase.com",
-      oldPassword: "correcthorsebatterystaple",
-      newPassword: "shinynewpassword"
+      email: $scope.upDate,
+      oldPassword: $scope.upDate2,
+      newPassword: $scope.upDate3,
     }, function(error) {
       if (error) {
         switch (error.code) {

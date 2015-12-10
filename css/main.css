@@ -265,7 +265,7 @@ img {
 }
 .vertical-alignment-helper {
     position: fixed;
-    top: 40%; /* This makes sure that we can still click outside of the modal to close it */
+    top: 40%; 
 }
 
 
@@ -302,9 +302,6 @@ footer {
 			#twitBox {
 				width: 80%;
 			}
-			#mobile {
-				display: inline-block;
-			}
 			#googmap {
 				width: 80%;
 				margin-left:10%;
@@ -329,6 +326,17 @@ footer {
 				width: 90%;
 			}
 }
+@media screen and (max-width: 992px) {
+			nav li {
+				display: block;
+			}
+			#bigNav {
+				display: none;
+			}
+			#mobile {
+				display: inline-block;
+			}
+}
 
 @media screen and (min-width: 768px) {
 			body {
@@ -340,15 +348,6 @@ footer {
 			}	
 			h2 {
 				text-align: center;
-			}
-			nav ul li ul li a {
-				padding-left: 0;
-				padding-right: 0;
-				padding-bottom: 0;
-			}
-			li a {
-				padding-left: 1em;
-				padding-right: 1em;
 			}
 			#twitBox {
 				width: 50%;
@@ -379,9 +378,6 @@ footer {
 				margin-right:15%;
 				margin-bottom: 50px;
 			}
-			#hamburger {
-				display: none;
-			}
 			#socials{
 				text-align: right;
 			}
@@ -398,6 +394,18 @@ footer {
 			}
 			#twitBox {
 				width: 45%;
+			}
+			nav ul li ul li a {
+				padding-left: 0;
+				padding-right: 0;
+				padding-bottom: 0;
+			}
+			li a {
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+			#hamburger {
+				display: none;
 			}
 			#motto {
 				font-size: 2em;
