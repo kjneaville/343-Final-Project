@@ -99,8 +99,13 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
  	});
 }])
 
-.controller('RecruitCtrl', ['$scope', '$http', function($scope, $http){
-	$scope.checkEmail = function() {
+.controller('RecruitCtrl', ['$scope', '$firebaseArray', '$firebaseObject', '$firebaseAuth', '$http', function($scope, $firebaseArray, $firebaseObject, $firebaseAuth, $http){
+	var ref = new Firebase("https://pikappaalphabetabeta.firebaseio.com");
+
+  var formRef = ref.child('potential_new_members');
+  $scope.rushee = $firebaseArray(formRef);
+
+  $scope.checkEmail = function() {
     	if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($scope.Email)) {
     		$scope.rushForm.Email.$setValidity('Email', true);
         } else {
@@ -123,9 +128,21 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
             $scope.rushForm.lastName.$setValidity('fName', false);
         }
     }
-
+    $scope.submit = function() {
+      $scope.rushee.$add({
+             'FirstName': $scope.fName,
+             'LastName': $scope.lastName,
+             'Year': $scope.year,
+             'School': $scope.school,
+             'Phone' : $scope.phone,
+             'Email' : $scope.Email,
+             'TimeSubmitted' :Firebase.ServerValue.TIMESTAMP
+        });
+        alert('You have successfully submitted your information, the Beta Beta chapter will contact you shortly.');
+        $scope.reset;
+    }
     $scope.reset = function() {
-    	document.getElementById("rushForm").reset();
+    	  document.getElementById("rushForm").reset();
         $scope.rushForm.$setPristine();
         $scope.rushForm.$setUntouched();
     }
@@ -245,7 +262,8 @@ angular.module("PikeApp", ['ngSanitize', 'ui.router', 'ui.bootstrap', 'firebase'
     $scope.like = function(chirp) {
       if($scope.userId) {
         chirp.likes += 1;
-        $scope.chirps.$save(chirp)
+        $scope.chirps.$save(chirp);
+
       }
     };
     $scope.dislike = function(chirp) {
