@@ -9,17 +9,14 @@ body {
     font-weight: 300;
     background-color: rgb(152, 0, 48);
 }
-
 h1, h2, h3, h4, h5, h6 {
 	font-family: Verdana, Geneva, sans-serif;
 }
-
 h1 {
 	color: rgb(152, 0, 48);
 	text-align: center;
 	text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
-
 h2 {
 	color: white;
 	text-align: left;
@@ -70,11 +67,9 @@ nav {
 .conPage {
 	text-shadow: none;
 }
-
 #mobile {
 	display: none;
 }
-
 li {
 	position: relative;
 	display: inline-block;
@@ -118,11 +113,9 @@ nav ul li:hover ul.dropdown {
 nav ul li:hover li.dropdown{
 	display:block;
 }
-
 i {
 	color: #fff;
 }
-
 header {
 	background-image: url(../img/PikeFrontOmegaFi2.png);
 	padding-top: 3em;
@@ -131,7 +124,6 @@ header {
 	background-position: center center;
 	width: 100%;
 }
-
 .col-md-6 {
 	padding: 1em;
 }
@@ -157,7 +149,6 @@ a{
 	margin-bottom: 50px;
 
 }
-
 form {
 	text-align: center;
 	margin-right: auto;
@@ -167,7 +158,6 @@ img {
 	margin-right: auto;
 	margin-left: auto;
 }
-
 #rushForm input, select, .logForm input  {
 	text-align: center;
 	width: 100%;
@@ -179,11 +169,9 @@ img {
     border: 2px solid #ccc;
     border-radius: 4px;
 }
-
 .btn {
 	margin-bottom: 15px;
 }
-
 #calendar {
 	width:100%;
 }
@@ -234,16 +222,13 @@ img {
 	margin-left: 30px;
 	font-size: 12px;
 }
-
 #memberSearch {
 	margin-top: 2.5%;
 	margin-bottom: 2.5%;
 }
-
 #searchLabel {
 	display: none;
 }
-
 #text-background {
 	max-width: 90%;
 	margin-top: 5%;
@@ -252,7 +237,6 @@ img {
 	border-radius: 5px;
 	background-color: #333333;
 }
-
 #socials {
 	font-size: 20px;
 	margin-bottom: 0.25em;
@@ -285,7 +269,6 @@ img {
 	text-align: center;
 	color: white;
 }
-
 footer {
 	border-top: 3px solid rgb(255, 196, 37);
 	background-color: rgb(167, 158, 112);
@@ -296,14 +279,12 @@ footer {
 	bottom: 0;
 	width: 100%;
 	z-index: 500000;
-}
-			
+}			
 @media screen and (max-width: 768px) {
 
 			nav li {
 				display: block;
 			}
-
 			.headline svg {
 				display: none;
 			}
@@ -328,12 +309,10 @@ footer {
 			#bigNav {
 				display: none;
 			}
-
 			#searchLabel {
 				color: white;
 				display: inline;
 			}
-
 			#magLabel {
 				display: none;
 			}
